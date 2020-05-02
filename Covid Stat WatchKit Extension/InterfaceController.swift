@@ -130,6 +130,41 @@ class InterfaceController: WKInterfaceController {
     
     
     
+
+    
+    
+    
+    override func willActivate() {
+        // This method is called when watch view controller is about to be visible to user
+        super.willActivate()
+    }
+    
+    override func didDeactivate() {
+        // This method is called when watch view controller is no longer visible
+        super.didDeactivate()
+    }
+    
+  
+    
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        
+        let country = DataSourceTbael?.countries[rowIndex]
+        presentController(withName: "Details", context: country)
+        
+        
+    }
+    
+    
+}
+
+
+
+extension InterfaceController {
+    
+    
+    
+    
+    
     
     func GetTableDat( completionHandler: @escaping (CountryCount?) -> Void){
         var request = URLRequest(url: URL(string: "https://api.covid19api.com/summary")!,timeoutInterval: Double.infinity)
@@ -173,94 +208,5 @@ class InterfaceController: WKInterfaceController {
     
     
     
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
     
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
-    }
-    
-  
-    
-    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        
-        let country = DataSourceTbael?.countries[rowIndex]
-        presentController(withName: "Details", context: country)
-        
-        
-    }
-    
-    
-}
-
-
-
-
-struct CountryCount: Codable {
-    let global:Country
-    var countries: [Country]
-    let date: String
-    
-    enum CodingKeys: String, CodingKey {
-        case countries = "Countries"
-        case date = "Date"
-        case global = "Global"
-    }
-}
-
-// MARK: - Country
-struct Country: Codable {
-    let country, slug: String?
-    var newConfirmed, totalConfirmed, newDeaths, totalDeaths: Int
-    let newRecovered, totalRecovered: Int
-    
-    
-    enum CodingKeys: String, CodingKey {
-        case country = "Country"
-        case slug = "Slug"
-        
-        
-        case newConfirmed = "NewConfirmed"
-        case totalConfirmed = "TotalConfirmed"
-        case newDeaths = "NewDeaths"
-        case totalDeaths = "TotalDeaths"
-        
-        case newRecovered = "NewRecovered"
-        case totalRecovered = "TotalRecovered"
-    }
-    
-    
-}
-struct Global: Codable {
-    let newConfirmed, totalConfirmed, newDeaths, totalDeaths: Int
-    let newRecovered, totalRecovered: Int
-    
-    enum CodingKeys: String, CodingKey {
-        case newConfirmed = "NewConfirmed"
-        case totalConfirmed = "TotalConfirmed"
-        case newDeaths = "NewDeaths"
-        case totalDeaths = "TotalDeaths"
-        case newRecovered = "NewRecovered"
-        case totalRecovered = "TotalRecovered"
-    }
-}
-
-
-struct Number {
-    static let withSeparator: NumberFormatter = {
-        let formatter = NumberFormatter()
-        //  formatter.groupingSeparator = ","
-        //   formatter.usesGroupingSeparator = true
-        //  formatter.numberStyle = .decimal
-        //formatter.locale = Locale.current
-        return formatter
-    }()
-}
-extension Int {
-    var stringWithSepator: String {
-        return self.hashValue.description
-    }
 }

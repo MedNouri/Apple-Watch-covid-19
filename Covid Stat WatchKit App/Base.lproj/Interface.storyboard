@@ -50,13 +50,17 @@
             <objects>
                 <controller identifier="Details" id="H19-9V-Q8i" customClass="CountryDetails" customModule="Covid_Stat_WatchKit_Extension">
                     <items>
-                        <label alignment="left" text="Country Name" id="0fl-3b-tJn">
-                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
-                        </label>
-                        <label alignment="left" text="000000000" id="72c-DT-jCP">
-                            <color key="textColor" name="reDTextColor"/>
-                            <fontDescription key="font" type="system" pointSize="25"/>
-                        </label>
+                        <group width="1" alignment="left" layout="vertical" id="rxX-5v-u61" userLabel="Total">
+                            <items>
+                                <label alignment="left" text="000000000" id="72c-DT-jCP">
+                                    <color key="textColor" name="reDTextColor"/>
+                                    <fontDescription key="font" type="system" pointSize="25"/>
+                                </label>
+                                <label alignment="left" text="Country Name" id="0fl-3b-tJn">
+                                    <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                </label>
+                            </items>
+                        </group>
                     </items>
                     <connections>
                         <outlet property="countryName" destination="0fl-3b-tJn" id="JNF-Cg-JBc"/>

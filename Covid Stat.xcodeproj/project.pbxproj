@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D2B9A1F245E06A6003BD082 /* CountryCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2B9A1E245E06A6003BD082 /* CountryCount.swift */; };
 		7DA37E05245A157300C9A47D /* Covid Stat WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 7DA37E04245A157300C9A47D /* Covid Stat WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		7DA37E0B245A157300C9A47D /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DA37E09245A157300C9A47D /* Interface.storyboard */; };
 		7DA37E0D245A157700C9A47D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DA37E0C245A157700C9A47D /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7D2B9A1E245E06A6003BD082 /* CountryCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCount.swift; sourceTree = "<group>"; };
 		7DA37E00245A157300C9A47D /* Covid Stat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid Stat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA37E04245A157300C9A47D /* Covid Stat WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Covid Stat WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DA37E0A245A157300C9A47D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -91,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D2B9A1D245E0696003BD082 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7D2B9A1E245E06A6003BD082 /* CountryCount.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		7DA37DF9245A157300C9A47D = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 		7DA37E17245A157700C9A47D /* Covid Stat WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				7D2B9A1D245E0696003BD082 /* Model */,
 				7DA37E18245A157700C9A47D /* InterfaceController.swift */,
 				7DA37E2F245A1E0800C9A47D /* RowController.swift */,
 				7DA37E1A245A157700C9A47D /* ExtensionDelegate.swift */,
@@ -269,6 +280,7 @@
 				7DA37E30245A1E0800C9A47D /* RowController.swift in Sources */,
 				7DA37E19245A157700C9A47D /* InterfaceController.swift in Sources */,
 				7DA37E34245A384C00C9A47D /* CountryDetails.swift in Sources */,
+				7D2B9A1F245E06A6003BD082 /* CountryCount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
