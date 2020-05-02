@@ -2,8 +2,8 @@
 //  NotificationController.swift
 //  Covid Stat WatchKit Extension
 //
-//  Created by Startdevelopment on 29/04/2020.
-//  Copyright © 2020 Startdevelopment. All rights reserved.
+//  Created by Mohamed Nouri  on 29/04/2020.
+//  Copyright © 2020 Mohamed Nouri . All rights reserved.
 //
 
 import WatchKit
